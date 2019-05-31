@@ -32,6 +32,6 @@ class ItcastSpider(scrapy.Spider):
         if self.offset < 13:
             self.offset += 1
 
-            # 每次处理完一页的数据之后，重新发送下一页页面请求
+            # 每次处理完一页的数据之后，重新发送下一页页面请求。
             # self.offset自增1，同时拼接为新的url，并调用回调函数self.parse处理Response
             yield scrapy.Request(self.url + str(self.offset), callback=self.parse)
