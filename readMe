@@ -1,0 +1,19 @@
+1.安装scrapy
+    1.1报错，先安装Twisted  pip install D:\Twisted-19.2.0-cp37-cp37m-win_amd64.whl
+    1.2安装scrapy
+    1.3安装pywin32
+2.创建项目
+    scrapy startproject gitspider
+3.创建spider
+    cd gitspider
+    scrapy genspider itcast itcast.cn
+4.设置setting文件
+    4.1设置user-agent
+    4.2打开ITEM_PIPELINES注释
+5.设置items文件中需要爬取的字段
+6.修改spider文件中的start_urls
+7.导入items文件的时候，需要检查是不是根目录。如果不是邮件标记为根目录
+8.解析response中的数据
+9.提交yield信息和请求
+10.在pipelines文件初始化、保存数据、关闭文件
+11.创建start.py文件，配置启动脚本路径
